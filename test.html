@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="developer">
+        <div style="background-color:#c400c4"> #c400c4 1 </div>    
+        <div style="background-color:#690069"> #690069 2 </div>
+        <div style="background-color:#450045"> #450045 3 </div>
+    </div>
+
+    <div class="developer">
+        <div style="background-color:#00c4ad"> #00c4ad 1 </div>    
+        <div style="background-color:#007780"> #690069 2 </div>
+        <div style="background-color:#015147"> #450045 3 </div>
+    </div>
+    
+
+    
+</body>
+
+<script type="module">
+    import { DynamicCarousel } from '/u24editor/editor.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.developer').forEach(container => {
+            new DynamicCarousel(container);
+        });
+    });
+</script>
+
+</html>
