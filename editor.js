@@ -21,21 +21,19 @@ export class DynamicCarousel {
         this.items.forEach(item => item.classList.add('carousel-item'));
 
         // Create and append navigation buttons inside the controls container
-        const toggleButton = this.createButton('carousel-button', 'Toggle Arrows', this.toggleArrows.bind(this));
-        const leftArrow = this.createButton('arrow left', '&#10094;', () => this.moveSlide(-1));
-        const rightArrow = this.createButton('arrow right', '&#10095;', () => this.moveSlide(1));
-
-        controlsContainer.appendChild(toggleButton);
-        controlsContainer.appendChild(leftArrow);
-        controlsContainer.appendChild(rightArrow);
+        const toggleButton = this.createButton('carousel-button', 'Toggle Arrows', this.toggleArrows.bind(this), controlsContainer);
+        const leftArrow = this.createButton('arrow left', '&#10094;', () => this.moveSlide(-1), controlsContainer);
+        const rightArrow = this.createButton('arrow right', '&#10095;', () => this.moveSlide(1), controlsContainer);
     }
-    createButton(className, innerHTML, eventListener) {
+
+    createButton(className, innerHTML, eventListener, parentElement) {
         const button = document.createElement('button');
         button.className = className;
         button.innerHTML = innerHTML;
         button.addEventListener('click', eventListener);
-        this.container.appendChild(button);
+        parentElement.appendChild(button); // Append button to the parentElement
     }
+
 
     
 
