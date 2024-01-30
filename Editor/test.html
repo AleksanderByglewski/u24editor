@@ -20,18 +20,18 @@
         <div style="background-color:#015147"> #450045 3 </div>
     </div>
     
-
+    <script type="module">
+        import { DynamicCarousel } from '/Editor/editor.js';
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.developer').forEach(container => {
+                new DynamicCarousel(container);
+            });
+        });
+    </script>
     
 </body>
 
-<script type="module">
-    import { DynamicCarousel } from '/u24editor/editor.js';
 
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.developer').forEach(container => {
-            new DynamicCarousel(container);
-        });
-    });
-</script>
 
 </html>

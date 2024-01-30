@@ -1,0 +1,43 @@
+.carousel-container {
+    /* General styles for the carousel container */
+    
+
+}
+
+.carousel-item {
+    /* Styles for each item in the carousel */
+     
+}
+
+.carousel-container *{
+    display: flex;
+    align-items: stretch;
+}
+.carousel-button {
+    /* Styles for the carousel buttons */
+     
+     background-color: #fff;
+     color: black;
+     border-radius: 0px;
+     border:1px solid black;
+     margin:4px;
+     padding: 4px 10px ;
+}
+
+.arrow {
+    /* Styles for the left and right arrows */
+    
+     background-color: black;
+     color: white;
+     border-radius: 0px;
+     border:1px solid black;
+     margin:4px;
+     padding: 4px 10px ;
+
+}
+
+.left, .right {
+    /* Additional styles for positioning arrows */
+    
+}
+

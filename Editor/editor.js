@@ -1,15 +1,26 @@
 export class DynamicCarousel {
-    constructor(container) {
+    constructor(container, cssFilePath = '/Editor/editor.css') {
         this.container = container;
         this.items = Array.from(container.children);
         this.currentIndex = 0;
     
+        this.loadCSS(cssFilePath); // Call this method to load the CSS
+
         this.firstRun();
 
         this.setupCarousel();
         this.showCurrentItem();
     }
+    loadCSS(filePath) {
+        const head = document.head;
+        const link = document.createElement('link');
 
+        link.type = 'text/css';
+        link.rel = 'stylesheet';
+        link.href = filePath;
+
+        head.appendChild(link);
+    }
     setupCarousel() {
         // Create a container for the controls
         const controlsContainer = document.createElement('div');
